@@ -7,6 +7,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+
+import { Facebook } from '@ionic-native/facebook';
+import firebase from 'firebase';
+
+firebase.initializeApp({
+    apiKey: "AIzaSyBHPVJyAaOSZGgmgE9PR4rowOV7UM17VCs",
+    authDomain: "facebooklogin-7e371.firebaseapp.com",
+    databaseURL: "https://facebooklogin-7e371.firebaseio.com",
+    projectId: "facebooklogin-7e371",
+    storageBucket: "facebooklogin-7e371.appspot.com",
+    messagingSenderId: "119507331706"
+  });
+
 @NgModule({
   declarations: [
     MyApp,
@@ -24,6 +37,7 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
